@@ -81,7 +81,7 @@ export default {
   },
   objf30 () {
     class a {
-      constructor () {
+      constructor () { 
         this.f = _ => console.log(a, a.property, typeof a, a.name, new a())
       }
     }
