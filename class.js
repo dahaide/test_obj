@@ -5,7 +5,7 @@ export default {
         this.x = 'xx'
         // y = 'yy' // constructor中给类添加属性时必须要用this否则会报错
       }
-      get a() { // 给类声明访问器属性 只能是用这种形式
+      get a () { // 给类声明访问器属性 只能是用这种形式
         return 'hello!'
       }
       b = 'world!';
@@ -18,7 +18,7 @@ export default {
       // this.f = 'ff' // constructor外部声明属性刚好相反 不能用this，否则会报错
     }
     // class n extends {m: 'm'} { // extends后面跟的必须是null/function类型之一，否则会报语法错误
-                                  // Uncaught TypeError: Super expression must either be null or a function, not (object/...)
+      // Uncaught TypeError: Super expression must either be null or a function, not (object/...)
     class n extends (_ => {}) {
       c = 'cc'
     }
@@ -80,12 +80,12 @@ export default {
     console.log(new x())
   },
   objf30 () {
-    class a {
+    class A {
       constructor () { //
-        this.f = _ => console.log(a, a.property, typeof a, a.name, new a())
+        this.f = _ => console.log(A, A.property, typeof A, A.name, new A())
       }
     }
-    new a().f()
-    console.log(a, new a, (new a).f)
+    new A().f()
+    console.log(A, new A, (new A).f)
   }
 }
